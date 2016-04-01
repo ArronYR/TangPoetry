@@ -14,7 +14,6 @@ class Loader extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      console.log(this.state.time);
       $('#app').addClass('loaded');
     }, this.state.time)
   }

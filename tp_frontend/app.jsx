@@ -11,29 +11,26 @@ let ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 let Main = require('./src/pages/main');
 let About = require('./src/pages/about');
-let Header = require('./src/components/header');
+let Footer = require('./src/components/footer');
+let Logo = require('./src/components/logo');
 let NotFound = require('./src/components/404');
 let Loader = require('./src/components/loader');
 
-require('./src/style/app.css');
+// require('./src/style/app.css');
 
 // 应用入口
 class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Loader time/>
-        <Header />
-        <ReactCSSTransitionGroup
-          component="div"
-          transitionName="page"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={500}
-        >
+        <Loader time={2000} />
+        <div className="content">
+          <Logo />
           {React.cloneElement(this.props.children, {
             key: this.props.location.pathname
           })}
-        </ReactCSSTransitionGroup>
+        </div>
+        <Footer />
       </div>
     );
   }
