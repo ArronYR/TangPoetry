@@ -9,7 +9,6 @@ class Loader extends React.Component {
       time: parseInt(props.time) || 2000,
       display: false
     }
-    console.log(this.state);
   }
 
   componentDidMount() {
