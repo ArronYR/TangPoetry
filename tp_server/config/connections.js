@@ -42,9 +42,9 @@ module.exports.connections = {
   ***************************************************************************/
   remoteMysql: {
     adapter: 'sails-mysql',
-    host: 'localhost:3306',
+    host: 'localhost',
     user: 'root',
-    password: 'password',
+    password: 'rootmysqlpassworld',
     database: 'tang_poetry'
   },
 

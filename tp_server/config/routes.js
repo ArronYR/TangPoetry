@@ -32,7 +32,29 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
   '/' : 'HomeController.index',
-  'get /poet/count' : 'PoetController.count',
+
+  'get /poet/:id': {
+    cors: {
+      origin: 'http://localhost/,http://localhost:3000',
+      methods: 'GET'
+    }
+  },
+
+  'get /poet/count' : {
+    target: 'PoetController.count',
+    cors: {
+      origin: 'http://localhost/,http://localhost:3000',
+      methods: 'GET'
+    }
+  },
+
+  'get /poetry/:id': {
+    cors: {
+      origin: 'http://localhost/,http://localhost:3000',
+      methods: 'GET'
+    }
+  },
+
   'get /poetry/count' : 'PoetryController.count',
 
   /***************************************************************************
