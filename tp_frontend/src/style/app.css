@@ -1,18 +1,93 @@
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), url(/src/fonts/latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), url(/src/fonts/latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+p {
+  margin: 0 0 2em 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.6;
+  margin: 0 0 1em 0;
+}
+h1 {
+  font-size: 1.75em;
+}
+@media screen and (max-width: 736px){
+  h1 {
+    font-size: 1.25em;
+  }
+}
+ul {
+  list-style: disc;
+  margin: 0 0 2em 0;
+  padding-left: 1em;
+}
+ol, ul {
+  list-style: none;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out,box-shadow 0.2s ease-in-out,opacity 0.2s ease-in-out,color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out,box-shadow 0.2s ease-in-out,opacity 0.2s ease-in-out,color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out,box-shadow 0.2s ease-in-out,opacity 0.2s ease-in-out,color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out,box-shadow 0.2s ease-in-out,opacity 0.2s ease-in-out,color 0.2s ease-in-out;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  height: 3.3em;
+  line-height: 3.3em;
+  padding: 0 1.5em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px rgba(250,247,255,0.1);
+  color: #fff !important;
+}
+a {
+  -moz-transition: color 0.2s ease-in-out,border-bottom-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out,border-bottom-color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out,border-bottom-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out,border-bottom-color 0.2s ease-in-out;
+  color: #b9babd;
+  text-decoration: none;
+  border-bottom: dotted 1px #696a6d;
+}
+input[type="submit"].fit,
+input[type="reset"].fit,
+input[type="button"].fit,
+button.fit, .button.fit {
+  display: block;
+  margin: 0 0 1em 0;
+  width: 100%;
+}
+input[type="submit"].special,
+input[type="reset"].special,
+input[type="button"].special,
+button.special, .button.special {
+    background-color: #33ada9;
+    color: !important;
+    box-shadow: none;
 }
 
 html,body,#app{
@@ -59,6 +134,51 @@ html,body,#app{
   height: 6.25em;
   margin: 0 auto 1em auto;
 }
+
+.about h1{
+  font-size: 2.75em;
+  margin-bottom: 0.25em;
+}
+.about .note {
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.3);
+}
+.about p{
+  color: #b9babd;
+}
+ul.actions {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+.about .actions {
+  width: 18.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+ul.actions.vertical li:first-child {
+  padding-top: 0;
+}
+ul.actions.vertical li {
+  display: block;
+  padding: 1.3em 0 0 0;
+}
+ul.actions.vertical li>* {
+  margin-bottom: 0;
+}
+ul.actions li {
+  display: inline-block;
+  padding: 0 1em 0 0;
+  vertical-align: middle;
+}
+ul.actions.vertical li {
+  display: block;
+  padding: 1.3em 0 0 0;
+}
+ul.actions li:last-child {
+  padding-right: 0 !important;
+}
+
 
 .footer{
   width: 100%;
