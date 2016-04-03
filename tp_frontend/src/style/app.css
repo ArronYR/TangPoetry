@@ -98,7 +98,7 @@ html,body,#app{
 .app{
   position: relative;
   background: #ececec;
-  background-image: url("../images/bg.svg"),linear-gradient(45deg, #774975 25%, #2A4584 75%);
+  background-image: url("../images/bg.svg"),linear-gradient(135deg, #774975 25%, #2A4584 75%);
   background-size: cover, cover;
   background-position: top, center;
   background-repeat: no-repeat, no-repeat;
