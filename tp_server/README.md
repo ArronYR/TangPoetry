@@ -1,3 +1,5 @@
-# sails-test
+# tp_server
 
-a [Sails](http://sailsjs.org) application
+A [Sails](http://sailsjs.org) application for `Tang Poetry` API server.
+
+
