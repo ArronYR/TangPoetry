@@ -5,14 +5,12 @@ const Assert = require('../utils/assert.js');
 
 module.exports = {
   findOne: function (poetId, cb) {
-    Poet.findOne({id: poetId}).populate('poetries').exec(function (err, poet){
-      if (err) {
-        throw new Error(err.message);
-        return;
-      }
+    Poet.findOne({id: poetId}).populate('poetries').then(function (poet){
       if (!poet) {poet = {}};
       cb(poet);
-    })
+    }).catch(function (err){
+      throw new Error(err.message);
+    });
   },
 
   count: function (cb){

@@ -21,7 +21,7 @@ module.exports = {
     // Add a reference to Poetries
     poetries : {
       collection: 'Poetry',
-      via: 'poet_id'
+      via: 'poet'
     }
   },
   autoCreatedAt: false,

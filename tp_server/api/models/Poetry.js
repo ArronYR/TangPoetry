@@ -14,9 +14,12 @@ module.exports = {
       primaryKey: true,
       unique: true
     },
-    // Add a reference to User
     poet_id: {
-      type: 'integer',
+      type: 'integer'
+    },
+    // Add a reference to User
+    poet: {
+      columnName: 'poet_id',
       model: 'poet'
     },
 
