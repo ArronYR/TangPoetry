@@ -22,5 +22,15 @@ module.exports = {
     }).catch(err => {
       sails.log.error(err.message);
     });
+  },
+
+  randOne: function(cb){
+    Poetry.query("SELECT * FROM `poetries` AS t1 JOIN (SELECT ROUND(RAND() * (SELECT MAX(id) FROM `poetries`)) AS id) AS t2 WHERE t1.id >= t2.id ORDER BY t1.id ASC LIMIT 1", function (err, result){
+      if (err) {
+        throw new Error(err.message);
+        return;
+      }
+      cb(result);
+    });
   }
 }

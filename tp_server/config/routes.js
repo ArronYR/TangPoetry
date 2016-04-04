@@ -72,7 +72,7 @@ module.exports.routes = {
   },
 
   'get /poetry/rand' : {
-    target: 'PoetController.rand',
+    target: 'PoetryController.rand',
     cors: {
       origin: 'http://localhost/,http://localhost:3000',
       methods: 'GET'

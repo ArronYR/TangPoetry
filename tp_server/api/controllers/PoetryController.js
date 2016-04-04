@@ -36,6 +36,12 @@ module.exports = {
     PoetryService.count(function (count) {
       res.ok({status: 200, msg: 'success', count: count});
     });
+  },
+
+  rand: function (req, res) {
+    PoetryService.randOne(function (poetry) {
+      res.ok({status: 200, msg: 'success', poetry: poetry});
+    });
   }
 };
 
