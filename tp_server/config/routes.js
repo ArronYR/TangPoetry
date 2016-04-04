@@ -48,6 +48,14 @@ module.exports.routes = {
     }
   },
 
+  'get /poet/rand' : {
+    target: 'PoetController.rand',
+    cors: {
+      origin: 'http://localhost/,http://localhost:3000',
+      methods: 'GET'
+    }
+  },
+
   'get /poetry/:id': {
     cors: {
       origin: 'http://localhost/,http://localhost:3000',
@@ -55,7 +63,21 @@ module.exports.routes = {
     }
   },
 
-  'get /poetry/count' : 'PoetryController.count',
+  'get /poetry/count' : {
+    target: 'PoetryController.count',
+    cors: {
+      origin: 'http://localhost/,http://localhost:3000',
+      methods: 'GET'
+    }
+  },
+
+  'get /poetry/rand' : {
+    target: 'PoetController.rand',
+    cors: {
+      origin: 'http://localhost/,http://localhost:3000',
+      methods: 'GET'
+    }
+  }
 
   /***************************************************************************
   *                                                                          *
