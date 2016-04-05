@@ -7,15 +7,20 @@ let Poetry = require('../components/poetry');
 class Main extends React.Component {
   constructor(props) {
     this.state = {
-      originUrl: 'http://localhost:1337/poetry/rand',
-      url: 'http://localhost:1337/poetry/rand?t=' + Math.random()
+      host: 'http://localhost:1337'
     }
+  }
+
+  componentWillMount() {
+    this.setState({
+      url: this.state.host + '/poetry/rand'
+    });
   }
 
   handleRand(e) {
     e.preventDefault();
     this.setState({
-      url: this.state.originUrl + '?t=' + Math.random()
+      url: this.state.host + '/poetry/rand?t=' + Math.random()
     });
   }
 
