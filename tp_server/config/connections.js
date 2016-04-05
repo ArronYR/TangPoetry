@@ -44,7 +44,7 @@ module.exports.connections = {
     adapter: 'sails-mysql',
     host: 'localhost',
     user: 'root',
-    password: 'password',
+    password: 'password for mysql',
     database: 'tang_poetry'
   },
 
