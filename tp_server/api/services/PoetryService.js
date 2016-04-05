@@ -23,13 +23,17 @@ module.exports = {
   },
 
   randOne: function(cb){
-    const sql = "SELECT * FROM `poetries` AS t1 JOIN (SELECT ROUND(RAND() * (SELECT MAX(id) FROM `poetries`)) AS id) AS t2 WHERE t1.id >= t2.id ORDER BY t1.id ASC LIMIT 1";
-    Poetry.query(sql, function (err, result){
-      if (err) {
-        throw new Error(err.message);
-        return;
-      }
-      cb(result);
+    (function _lookupPoetryRandId(afterLookup){
+      const sql = "SELECT t1.id FROM `poetries` AS t1 JOIN (SELECT ROUND(RAND() * (SELECT MAX(id) FROM `poetries`)) AS id) AS t2 WHERE t1.id >= t2.id ORDER BY t1.id ASC LIMIT 1";
+      Poetry.query(sql, function (err, result){
+        if (err) {
+          throw new Error(err.message);
+          return;
+        }
+        afterLookup(result[0].id);
+      });
+    })(function (id){
+      PoetryService.findOne(id, cb);
     });
   }
 }
