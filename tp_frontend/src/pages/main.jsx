@@ -7,17 +7,24 @@ let Poetry = require('../components/poetry');
 class Main extends React.Component {
   constructor(props) {
     this.state = {
-      poetry: props.poetry || []
+      originUrl: 'http://localhost:1337/poetry/rand',
+      url: 'http://localhost:1337/poetry/rand?t=' + Math.random()
     }
+  }
+
+  handleRand(e) {
+    e.preventDefault();
+    this.setState({
+      url: this.state.originUrl + '?t=' + Math.random()
+    });
   }
 
   render() {
     return (
-      <div className="about">
-        <p>A small site about Tang poetry and create by react.js</p>
-        <Poetry url='http://localhost:1337/poet/rand' />
+      <div className="home">
+        <Poetry url={this.state.url} />
         <ul className="actions vertical">
-          <li><a href="javascript:void(0);" className="button fit">Change</a></li>
+          <li><a href="javascript:void(0);" className="button fit" onClick={e => {this.handleRand(e)}}>Change</a></li>
         </ul>
         <p className="note">( Click the Change button to get other poetry ~~)</p>
       </div>
