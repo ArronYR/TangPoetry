@@ -2,13 +2,14 @@
 
 const React = require('react');
 const $ = require('jquery');
+const Config = require('../config/config');
 
 class Poetry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isReady: false,
-      url: props.url,
+      random: props.random,
       poetry: props.poetry || []
     }
   }
@@ -16,7 +17,7 @@ class Poetry extends React.Component {
   componentWillReceiveProps(nextProps) {
     this.setState({
       isReady: false,
-      url: nextProps.url,
+      random: nextProps.random,
       poetry: []
     });
     this.loadDataFromServer();
@@ -28,7 +29,7 @@ class Poetry extends React.Component {
 
   loadDataFromServer() {
     $.ajax({
-      url: this.state.url,
+      url: Config.host + "poetry/rand?t=" + this.state.random,
       type: 'GET',
       dataType: 'json',
       data: {},

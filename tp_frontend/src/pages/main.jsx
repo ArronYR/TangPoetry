@@ -7,27 +7,21 @@ let Poetry = require('../components/poetry');
 class Main extends React.Component {
   constructor(props) {
     this.state = {
-      host: 'http://localhost:1337'
+      random: Math.random()
     }
-  }
-
-  componentWillMount() {
-    this.setState({
-      url: this.state.host + '/poetry/rand'
-    });
   }
 
   handleRand(e) {
     e.preventDefault();
     this.setState({
-      url: this.state.host + '/poetry/rand?t=' + Math.random()
+      random: Math.random()
     });
   }
 
   render() {
     return (
       <div className="home">
-        <Poetry url={this.state.url} />
+        <Poetry random={this.state.random} />
         <ul className="actions vertical">
           <li><a href="javascript:void(0);" className="button fit" onClick={e => {this.handleRand(e)}}>Change</a></li>
         </ul>
