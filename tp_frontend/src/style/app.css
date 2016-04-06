@@ -71,7 +71,6 @@ a {
   transition: color 0.2s ease-in-out,border-bottom-color 0.2s ease-in-out;
   color: #b9babd;
   text-decoration: none;
-  border-bottom: dotted 1px #696a6d;
 }
 input[type="submit"].fit,
 input[type="reset"].fit,

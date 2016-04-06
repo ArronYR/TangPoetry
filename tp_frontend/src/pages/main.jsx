@@ -31,7 +31,7 @@ class Main extends React.Component {
         <ul className="actions vertical">
           <li><a href="javascript:void(0);" className="button fit" onClick={e => {this.handleRand(e)}}>Change</a></li>
         </ul>
-        <p className="note">( Click the Change button to get other poetry ~~)</p>
+        <p className="note">( Click the Change button to get next poetry ~~)</p>
       </div>
     );
   }
