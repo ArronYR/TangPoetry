@@ -26,6 +26,6 @@ module.exports = function forbidden (data, options) {
   // Log request
   LogRequest(req, res);
 
-  return res.jsonx(data);
+  return res.jsonx({status: 403, msg: 'Forbidden.'});
 };
 

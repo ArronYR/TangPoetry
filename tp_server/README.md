@@ -5,6 +5,7 @@ A [Sails](http://sailsjs.org) application for `Tang Poetry` API server.
 ## Install
 ```
 git clone https://github.com/ArronYR/TangPoetry/
+cd tp_server
 npm install
 sails lift
 ```
@@ -76,8 +77,8 @@ sails lift
 
 ### Find
 
-+ `http://localhost:1337/poet`
-+ `http://localhost:1337/poetry`
++ `http://localhost:1337/poets`
++ `http://localhost:1337/poetries`
 
 Request these two API will return `10` records about `poet` or `poetry`.
 
@@ -107,6 +108,7 @@ e.g.?sort=name ASC
 + If specified, overide the default automatic population process. Accepts a comma separated list of attributes names for which to populate record values.
 ```json
 e.g.?populate=poetries
+e.g.?populate=poet
 ```
 + If specified, a JSONP response will be sent (instead of JSON). This is the name of a client-side javascript function to call, to which results will be passed as the first (and only) argument.
 ```json

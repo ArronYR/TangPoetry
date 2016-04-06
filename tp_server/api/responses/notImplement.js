@@ -12,5 +12,5 @@ module.exports = function notImplement (data, options) {
   // Log request
   LogRequest(req, res);
 
-  return res.jsonx({status: 404, msg: 'interface not implement'});
+  return res.jsonx({status: 404, msg: 'Interface not implement'});
 };

@@ -27,5 +27,5 @@ module.exports = function created (data, options) {
   // Log request
   LogRequest(req, res);
 
-  return res.jsonx(data);
+  return res.jsonx({status: 201, msg: 'Created.'});
 };

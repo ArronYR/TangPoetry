@@ -31,6 +31,6 @@ module.exports = function notFound (data, options) {
   // Log request
   LogRequest(req, res);
 
-  return res.jsonx(data);
+  return res.jsonx({status: 404, msg: 'Not found.'});
 };
 
