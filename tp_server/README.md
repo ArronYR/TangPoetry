@@ -114,3 +114,7 @@ e.g.?callback=my_JSONP_data_receiver_fn
 ```
 
 More infos see [here](http://sailsjs.org/documentation/reference/blueprint-api/find-where).
+
+## About me
+
+博客：[http://blog.helloarron.com](http://blog.helloarron.com)
