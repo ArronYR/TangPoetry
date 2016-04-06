@@ -131,7 +131,7 @@ html,body,#app{
   display: block;
   width: 6.25em;
   height: 6.25em;
-  margin: 0 auto 1em auto;
+  margin: 1em auto 1em auto;
 }
 
 .about h1{
@@ -273,6 +273,15 @@ ul.actions li:last-child {
   color: #eee;
 }
 
+.error{
+  margin: 1em 0;
+  font-size: 2em;
+  color: #fff;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-family: cursive;
+}
 
 .page-enter {
   opacity: 0.01;

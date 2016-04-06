@@ -1,7 +1,7 @@
 'use strict';
 
 const Config = {
-  host : 'http://localhost:1337/'
+  host : 'http://139.129.52.197:1337/'
 }
 
 module.exports = Config;
