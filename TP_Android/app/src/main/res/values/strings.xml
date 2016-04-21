@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">唐诗小记</string>
+    <string name="app_name">唐诗小阅</string>
     <string name="poetry_default_title">静夜思</string>
     <string name="poetry_default_author">李白</string>
     <string name="poetry_default_content">床前明月光，疑是地上霜。举头望明月，低头思故乡。</string>

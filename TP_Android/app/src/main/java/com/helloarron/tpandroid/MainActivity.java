@@ -3,6 +3,7 @@ package com.helloarron.tpandroid;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -12,8 +13,12 @@ import android.widget.Toast;
 import com.helloarron.tpandroid.util.ParsePoetry;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static Boolean isExit = false;
 
     private ImageView mRefreshImageBtn;
     private TextView tvPoetryTitle, tvPoetryAuthor, tvPoetryContentLine;
@@ -56,12 +61,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.refresh_btn:
                 Toast.makeText(this, "refresh", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
+        }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            //调用双击退出函数
+            exitBy2Click();
+        }
+        return false;
+    }
+
+    /**
+     * 双击退出函数
+     */
+    private void exitBy2Click() {
+        Timer tExit = null;
+        if (isExit == false) {
+            // 准备退出
+            isExit = true;
+            Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            tExit = new Timer();
+            tExit.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    // 取消退出
+                    isExit = false;
+                }
+            }, 2000);
+            // 如果2秒钟内没有按下返回键，则启动定时器取消掉刚才执行的任务
+        } else {
+            finish();
+            System.exit(0);
         }
     }
 }
