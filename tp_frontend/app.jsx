@@ -2,19 +2,19 @@
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-let ReactRouter = require('react-router');
-let browserHistory = ReactRouter.browserHistory;
-let Router = ReactRouter.Router;
-let Route = ReactRouter.Route;
-let IndexRoute = ReactRouter.IndexRoute;
-let ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+const ReactRouter = require('react-router');
+const browserHistory = ReactRouter.browserHistory;
+const Router = ReactRouter.Router;
+const Route = ReactRouter.Route;
+const IndexRoute = ReactRouter.IndexRoute;
+const ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
-let Main = require('./src/pages/main');
-let About = require('./src/pages/about');
-let Footer = require('./src/components/footer');
-let Logo = require('./src/components/logo');
-let NotFound = require('./src/components/404');
-let Loader = require('./src/components/loader');
+const Main = require('./src/pages/main');
+const About = require('./src/pages/about');
+const Footer = require('./src/components/footer');
+const Logo = require('./src/components/logo');
+const NotFound = require('./src/components/404');
+const Loader = require('./src/components/loader');
 
 // require('./src/style/app.css');
 

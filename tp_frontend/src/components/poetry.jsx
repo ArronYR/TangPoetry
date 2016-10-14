@@ -54,8 +54,8 @@ class Poetry extends React.Component {
       )
     }
 
-    let poetryArr = this.state.poetry.content.split(/[\u3002]+/);
-    let poetryContent = poetryArr.map(function (content, idx) {
+    var poetryArr = this.state.poetry.content.split(/[\u3002]+/);
+    var poetryContent = poetryArr.map(function (content, idx) {
       if (content.length > 1) {
         return (
           <li key={idx} className="poetry-line">{content}。</li>

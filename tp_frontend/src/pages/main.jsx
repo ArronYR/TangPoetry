@@ -2,7 +2,7 @@
 
 const React = require('react');
 
-let Poetry = require('../components/poetry');
+const Poetry = require('../components/poetry');
 
 class Main extends React.Component {
   constructor(props) {
