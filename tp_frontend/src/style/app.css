@@ -90,17 +90,18 @@ button.special, .button.special {
 }
 
 html,body,#app{
-  height: 100%;
   width: 100%;
   font-family: 'Lato', serif;
 }
-.app{
-  position: relative;
-  background: #ececec;
+#app{
   background-image: url("../images/bg.svg"),linear-gradient(135deg, #774975 25%, #2A4584 75%);
   background-size: cover, cover;
   background-position: top, center;
   background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+}
+.app{
+  position: relative;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
