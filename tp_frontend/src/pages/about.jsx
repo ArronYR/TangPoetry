@@ -1,6 +1,6 @@
 'use strict';
 
-const React = require('react');
+var React = require('react');
 
 class About extends React.Component {
   render() {

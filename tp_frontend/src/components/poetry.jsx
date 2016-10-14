@@ -1,8 +1,8 @@
 'use strict';
 
-const React = require('react');
-const $ = require('jquery');
-const Config = require('../config/config');
+var React = require('react');
+var $ = require('jquery');
+var Config = require('../config/config');
 
 class Poetry extends React.Component {
   constructor(props) {

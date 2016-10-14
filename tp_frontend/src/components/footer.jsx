@@ -1,8 +1,8 @@
 'use strict';
 
-const React = require('react');
-const IndexLink = require('react-router').IndexLink;
-const Link = require('react-router').Link;
+var React = require('react');
+var IndexLink = require('react-router').IndexLink;
+var Link = require('react-router').Link;
 
 class Footer extends React.Component {
   render() {

@@ -1,20 +1,20 @@
 'use strict';
 
-const React = require('react');
-const ReactDOM = require('react-dom');
-const ReactRouter = require('react-router');
-const browserHistory = ReactRouter.browserHistory;
-const Router = ReactRouter.Router;
-const Route = ReactRouter.Route;
-const IndexRoute = ReactRouter.IndexRoute;
-const ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var ReactRouter = require('react-router');
+var browserHistory = ReactRouter.browserHistory;
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
+var IndexRoute = ReactRouter.IndexRoute;
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
-const Main = require('./src/pages/main');
-const About = require('./src/pages/about');
-const Footer = require('./src/components/footer');
-const Logo = require('./src/components/logo');
-const NotFound = require('./src/components/404');
-const Loader = require('./src/components/loader');
+var Main = require('./src/pages/main');
+var About = require('./src/pages/about');
+var Footer = require('./src/components/footer');
+var Logo = require('./src/components/logo');
+var NotFound = require('./src/components/404');
+var Loader = require('./src/components/loader');
 
 // require('./src/style/app.css');
 

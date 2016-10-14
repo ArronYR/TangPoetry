@@ -1,7 +1,7 @@
 'use strict';
 
-const React = require('react');
-const $ = require('jquery');
+var React = require('react');
+var $ = require('jquery');
 
 class Loader extends React.Component {
   constructor(props) {

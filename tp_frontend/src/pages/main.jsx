@@ -1,8 +1,8 @@
 'use strict';
 
-const React = require('react');
+var React = require('react');
 
-const Poetry = require('../components/poetry');
+var Poetry = require('../components/poetry');
 
 class Main extends React.Component {
   constructor(props) {
