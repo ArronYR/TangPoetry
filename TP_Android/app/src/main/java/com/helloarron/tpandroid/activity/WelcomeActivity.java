@@ -1,16 +1,17 @@
-package com.helloarron.tpandroid;
+package com.helloarron.tpandroid.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
+
+import com.helloarron.tpandroid.AppBaseActivity;
+import com.helloarron.tpandroid.R;
 
 /**
  * Created by arron on 16/4/21.
  */
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeActivity extends AppBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

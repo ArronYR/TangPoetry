@@ -1,6 +1,5 @@
-package com.helloarron.tpandroid;
+package com.helloarron.tpandroid.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -10,13 +9,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.helloarron.tpandroid.AppBaseActivity;
+import com.helloarron.tpandroid.R;
 import com.helloarron.tpandroid.util.ParsePoetry;
 
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppBaseActivity implements View.OnClickListener {
 
     private static Boolean isExit = false;
 
