@@ -1,6 +1,8 @@
 package com.helloarron.tpandroid.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -24,6 +26,14 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
     private ImageView mRefreshImageBtn;
     private TextView tvPoetryTitle, tvPoetryAuthor, tvPoetryContentLine;
     private LinearLayout tvPoetryContent;
+
+
+    private Handler mUIHandle = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
