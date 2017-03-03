@@ -1,6 +1,6 @@
 # TangPoetry
 
-A open project about TangPoetry.
+A open project about Tang Poetry.
 
 ## Frontend(React)
 See the 【[frontend-react](https://github.com/ArronYR/TangPoetry/tree/master/tp_frontend)】
