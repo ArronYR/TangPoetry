@@ -3,16 +3,16 @@
 A open project about TangPoetry.
 
 ## Frontend(React)
-See the 【[frontend-react](https://github.com/ArronYR/TangPoetry/tree/master/tp_frontend)】 directory
+See the 【[frontend-react](https://github.com/ArronYR/TangPoetry/tree/master/tp_frontend)】
 
 ## Server(Sails.js)
-See the 【[server-sails](https://github.com/ArronYR/TangPoetry/tree/master/tp_server)】 directory
+See the 【[server-sails](https://github.com/ArronYR/TangPoetry/tree/master/tp_server)】
 
 ## Android
-See the 【[Android](https://github.com/ArronYR/TangPoetry/tree/master/Android)】 directory
+See the 【[Android](https://github.com/ArronYR/TangPoetry/tree/master/Android)】
 
 ## Api(ThinkPHP 5)
-See the 【[Api](https://github.com/ArronYR/TangPoetry/tree/master/Api)】 directory
+See the 【[Api](https://github.com/ArronYR/TangPoetry/tree/master/Api)】
 
 ## About me
 
