@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:22.2.1'
+    compile 'com.google.code.gson:gson:2.0'
+    compile files('libs/Android_Location_V1.3.1.jar')
+    compile files('libs/httpmime-4.1.1.jar')
+    compile files('libs/ormlite-android-4.31.jar')
+    compile files('libs/ormlite-core-4.31.jar')
+    compile files('libs/universal-image-loader-1.9.3-with-sources.jar')
+}

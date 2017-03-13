@@ -3,80 +3,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.helloarron.tpandroid.activity.MainActivity">
+    tools:context="com.helloarron.tpandroid.activity.main.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/line"
+        android:layout_below="@+id/title_bar"></FrameLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_horizontal"
+        android:layout_above="@+id/tab" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="56dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:id="@+id/tab"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
 
         <LinearLayout
-            android:id="@+id/poetry_header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/poetry_title"
+            <RelativeLayout
+                android:id="@+id/img_layout"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="middle"
-                android:maxLines="1"
-                android:text="@string/poetry_default_title"
-                android:textAlignment="center"
-                android:textSize="28dp" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_home_disable" />
+            </RelativeLayout>
 
             <TextView
-                android:id="@+id/poetry_author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="middle"
-                android:maxLines="1"
-                android:paddingTop="4dp"
-                android:textAlignment="center"
-                android:textSize="14dp" />
+                android:id="@+id/text"
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/home_title" />
         </LinearLayout>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/poetry_header"
-            android:layout_centerVertical="true"
-            android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/poetry_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingTop="12dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-            </LinearLayout>
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_comprehensive_disable" />
+            </RelativeLayout>
 
-        </ScrollView>
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/comprehensive_title" />
+        </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorAccent"
-        android:gravity="center">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/refresh_btn"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:clickable="true"
-            android:contentDescription="@null"
-            android:contextClickable="true"
-            android:src="@drawable/icons_refresh" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_collect_disable" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/collect_title" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

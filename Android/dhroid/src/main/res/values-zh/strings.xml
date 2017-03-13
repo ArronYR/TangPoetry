@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">松鼠快运</string>
+    <string name="listview_to_xiala">下拉刷新</string>
+    <string name="listview_to_loadmore">点击加载更多</string>
+    <string name="listview_loading">加载中....</string>
+    <string name="listview_nomore_data">无更多数据</string>
+    <string name="listview_pulldown_toload">下拉刷新</string>
+    <string name="listview_pulldown_frist_loading">第一次刷新</string>
+    <string name="listview_last_loading_time">上一次刷新:%1$s</string>
+    <string name="listview_release_to_loading">松开刷新</string>
+    <string name="listview_time_formart">yyyy-MM-dd HH:mm:ss</string>
+    <string name="nonet">没有可用的网络</string>
+    <string name="net_bad">当前网络信号不好</string>
+    <string name="loading">加载中...</string>
+    <string name="net_error">网络超时</string>
+
+</resources>

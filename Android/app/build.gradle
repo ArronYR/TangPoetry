@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "com.helloarron.tpandroid"
@@ -19,10 +19,18 @@ android {
     }
 }
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
+    compile project(':dhroid')
+    compile project(':ptrlib')
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/eventbus-2.0.2.jar')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'cn.pedant.sweetalert:library:1.3'
 }
