@@ -292,8 +292,7 @@ public class NetJSONAdapter extends BeanAdapter<JSONObject> implements
             itemV.setTag(viewHolder);
         }
         JSONObject jo = (JSONObject) item;
-        for (Iterator<FieldMap> iterator = fields.iterator(); iterator
-                .hasNext(); ) {
+        for (Iterator<FieldMap> iterator = fields.iterator(); iterator.hasNext(); ) {
             FieldMap fieldMap = iterator.next();
             View v = null;
             if (newViewHolder) {

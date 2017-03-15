@@ -13,7 +13,16 @@ public class ParsePoetry {
 
         String[] lines = content.split("[\\u3002]+");
         for (int i = 0; i < lines.length; i++) {
-            rows.add(lines[i] + "。");
+            String row = lines[i] + "。";
+            if (row.contains("？")) {
+                String[] rowArr = row.split("[\\uFF1F]+");
+                for (int j = 0; j < rowArr.length - 1; j++) {
+                    rows.add(rowArr[j] + "？");
+                }
+                rows.add(rowArr[rowArr.length - 1]);
+            } else {
+                rows.add(row);
+            }
         }
         return rows;
     }

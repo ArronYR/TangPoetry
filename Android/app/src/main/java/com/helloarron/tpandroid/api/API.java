@@ -8,5 +8,6 @@ import com.helloarron.tpandroid.base.Const;
 
 public class API {
 
-    public String rand = Const.HOST + "/api/poetry/rand";
+    // 特殊 1，33042
+    public String rand = Const.HOST + "/api/poetry/33042";
 }

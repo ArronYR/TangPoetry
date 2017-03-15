@@ -49,6 +49,7 @@ public class TangPoetryApplication extends Application implements Thread.Uncaugh
         GlobalParams globalParams = IocContainer.getShare().get(GlobalParams.class);
         // 语言
         globalParams.setGlobalParam("lang", "zh-cn");
+        globalParams.setGlobalParam("rows", "1");
 
         TPPreference per = IocContainer.getShare().get(TPPreference.class);
         per.load();

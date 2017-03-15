@@ -46,8 +46,8 @@ public class Const {
 
     public static String response_result = "result";
 
-    public static String response_errorCode = "errorCode";
-    public static String response_errorMsg = "errorMsg";
+    public static String response_errorCode = "code";
+    public static String response_errorMsg = "message";
 
     public static String response_total = "total";
 

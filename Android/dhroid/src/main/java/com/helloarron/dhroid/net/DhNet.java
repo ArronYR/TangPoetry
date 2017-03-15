@@ -645,7 +645,7 @@ public class DhNet {
                 } catch (UnsupportedEncodingException e1) {
                     e1.printStackTrace();
                 }
-                httpPost.setEntity(mulentity);
+                httpPost.setEntity((HttpEntity) mulentity);
                 HttpResponse response;
                 try {
                     response = HttpManager.execute(httpPost);
