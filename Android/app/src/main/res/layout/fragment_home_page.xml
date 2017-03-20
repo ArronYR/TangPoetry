@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical">
 
     <include layout="@layout/include_main_header" />
 
     <LinearLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -15,29 +15,30 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/tv_poetry_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/margin_padding_l"
-            android:text="@string/app_name"
-            android:textColor="@color/text_44_black"
-            android:textSize="@dimen/text_big" />
+            android:paddingLeft="@dimen/margin_padding_l"
+            android:paddingRight="@dimen/margin_padding_l"
+            android:paddingTop="@dimen/margin_padding_xxl"
+            android:textAlignment="center"
+            android:textColor="@color/text_teal_400"
+            android:textSize="@dimen/text_bigger" />
 
         <TextView
-            android:id="@+id/tv_author"
+            android:id="@+id/tv_poetry_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_padding_l"
-            android:text="@string/app_name"
-            android:textColor="@color/text_44_black"
-            android:textSize="@dimen/text_big" />
+            android:textColor="@color/text_99_grey"
+            android:textSize="@dimen/text_small" />
     </LinearLayout>
 
     <com.helloarron.tpandroid.views.RefreshListViewAndMore
         android:id="@+id/my_listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:gravity="center"
         android:orientation="vertical" />
 </LinearLayout>

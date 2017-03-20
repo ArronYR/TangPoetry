@@ -4,8 +4,14 @@
     <string name="home_title">首页</string>
     <string name="comprehensive_title">综合</string>
     <string name="collect_title">收藏</string>
+    <string name="poetry_title">古诗</string>
+    <string name="poet_title">诗人</string>
+
+    <string name="search_poetry">诗句</string>
+    <string name="search_poet">诗人</string>
 
     <string name="support">支持作者</string>
+    <string name="wipe_cache">清除缓存</string>
     <string name="lang">语言</string>
     <string name="chinese">中文</string>
     <string name="english">English</string>
@@ -16,9 +22,10 @@
 
     <string name="current_version">当前版本</string>
     <string name="next_version_plan">下版本计划：</string>
-    <string name="next_version_plan_one">1.支持QQ、微信分享，将导出结果发送给电脑或好友；</string>
-    <string name="next_version_plan_two">2.加入历史记录功能；</string>
-    <string name="next_version_plan_three">3.优化该版本因技术有限遗留的问题。</string>
+    <string name="next_version_plan_one">1.支持QQ、微信分享，把诗分享给好友；</string>
+    <string name="next_version_plan_two">2.加入历史搜索记录功能；</string>
+    <string name="next_version_plan_three">3.加入用户功能，将收藏数据保存在云端。</string>
+    <string name="next_version_plan_four">4.增加反馈功能，及时修正错误诗句</string>
 
     <string name="warning">警告</string>
     <string name="error">错误</string>
@@ -52,9 +59,7 @@
     <string name="failed_create_folder">创建目录失败</string>
     <string name="save_success">保存成功</string>
 
-    <string name="symbols">符号</string>
-    <string name="rules">规则</string>
-    <string name="operations">操作符</string>
+    <string name="symbol">首</string>
 
     <string name="support_tip">因该App使用了付费第三方工具，如果您喜欢该工具，请通过下方的方式支持作者吧，O(∩_∩)O谢谢！</string>
     <string name="support_way_title">支持方式</string>
@@ -65,4 +70,12 @@
     <string name="support_cancel">有待改进</string>
 
     <string name="exit_des">再按一次退出程序</string>
+
+    <string name="cancel_collect">取消成功</string>
+    <string name="add_collect">收藏成功</string>
+
+    <string name="search_hit">输入关键词</string>
+
+    <string name="wipe_cache_sure">清除缓存将会清空收藏数据，是否清除？</string>
+    <string name="wipe_success">缓存清除成功</string>
 </resources>

@@ -32,7 +32,7 @@ public class LoadMoreFootView extends LinearLayout implements LoadMoreUIHandler 
     }
 
     private void setupViews() {
-        LayoutInflater.from(getContext()).inflate(R.layout.list_footview, this);
+        LayoutInflater.from(getContext()).inflate(R.layout.list_foot_view, this);
         layoutV = findViewById(R.id.layout);
         mTextView = (TextView) findViewById(R.id.cube_views_load_more_default_footer_text_view);
         progress = (ProgressBar) findViewById(R.id.progress);

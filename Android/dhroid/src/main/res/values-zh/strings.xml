@@ -1,6 +1,5 @@
 <resources>
 
-    <string name="app_name">松鼠快运</string>
     <string name="listview_to_xiala">下拉刷新</string>
     <string name="listview_to_loadmore">点击加载更多</string>
     <string name="listview_loading">加载中....</string>

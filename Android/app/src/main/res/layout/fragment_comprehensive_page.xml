@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <include layout="@layout/include_main_header" />
+    <include layout="@layout/include_search_header" />
 
     <include layout="@layout/include_refresh_listview" />
 </LinearLayout>

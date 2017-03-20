@@ -8,6 +8,10 @@ import android.os.Environment;
  */
 
 public class Const {
+    public final static int LOADING = 0x0;
+    public final static int LOADED = 0x1;
+
+    public final static int CANCEL = 0x2;
 
     // 首先默认个文件保存路径
     // 保存到SD卡

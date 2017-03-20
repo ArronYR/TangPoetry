@@ -370,7 +370,7 @@ public class NetJSONAdapter extends BeanAdapter<JSONObject> implements
             // 后台处理主要是数据封装
             JSONArray array = null;
             JSONObject responseJo = response.jSON();
-            total = JSONUtil.getInt(responseJo, "totalcount");
+            total = JSONUtil.getInt(responseJo, "total");
             if (fromWhat == null) {
                 array = response.jSONArrayFromData();
             } else {

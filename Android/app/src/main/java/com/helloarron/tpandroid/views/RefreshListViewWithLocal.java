@@ -179,6 +179,7 @@ public class RefreshListViewWithLocal extends LinearLayout {
 
                 if (mAdapter.getPageNo() == 1) {
                     if (mEmptyV != null) {
+                        Log.d("aa", "aaa");
                         emptyLayout.setVisibility(mAdapter.getValues().size() == 0 ? View.VISIBLE : View.GONE);
                     }
 

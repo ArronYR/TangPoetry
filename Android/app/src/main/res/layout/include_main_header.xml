@@ -31,7 +31,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/tv_title"
             style="@style/text_white_bigger"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,5 +41,23 @@
             android:maxWidth="200dp"
             android:singleLine="true" />
 
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingRight="@dimen/margin_padding_xxl">
+
+            <TextView
+                android:id="@+id/tv_right"
+                style="@style/text_white_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:visibility="visible" />
+
+        </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

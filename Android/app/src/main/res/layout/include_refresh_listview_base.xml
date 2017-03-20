@@ -48,6 +48,5 @@
                 android:visibility="gone"></LinearLayout>
         </RelativeLayout>
     </com.helloarron.ptrlib.PtrFrameLayout>
-    '
 
 </RelativeLayout>

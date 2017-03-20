@@ -1,14 +1,19 @@
 package com.helloarron.tpandroid.base;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.helloarron.dhroid.activity.BaseActivity;
 import com.helloarron.tpandroid.R;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 
 /**
@@ -16,9 +21,13 @@ import com.helloarron.tpandroid.R;
  */
 
 public abstract class TPBaseActivity extends BaseActivity {
+
+    public Activity self;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        self = this;
     }
 
     @Override
@@ -44,11 +53,25 @@ public abstract class TPBaseActivity extends BaseActivity {
         }
     }
 
+    public void setRightIconGone() {
+        TextView rightV = (TextView) findViewById(R.id.tv_right);
+        if (rightV != null) {
+            rightV.setVisibility(View.GONE);
+        }
+    }
+
+    public void setRightIconVisible() {
+        TextView rightV = (TextView) findViewById(R.id.tv_right);
+        if (rightV != null) {
+            rightV.setVisibility(View.VISIBLE);
+        }
+    }
+
     /**
      * 设置标题
      */
     public void setTitle(String text) {
-        TextView titleT = (TextView) findViewById(R.id.title);
+        TextView titleT = (TextView) findViewById(R.id.tv_title);
         if (titleT != null) {
             titleT.setText(text);
         }
@@ -79,7 +102,7 @@ public abstract class TPBaseActivity extends BaseActivity {
     @Override
     public void finish() {
         super.finish();
-        // popOutAnim();
+        popOutAnim();
     }
 
     public void finishWithoutAnim() {
@@ -140,4 +163,24 @@ public abstract class TPBaseActivity extends BaseActivity {
         super.onDestroy();
     }
 
+    public void showErrorDialog(String msg) {
+        new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                .setTitleText(getString(R.string.error))
+                .setContentText(msg)
+                .show();
+    }
+
+    public SweetAlertDialog showLoadingDialog() {
+        SweetAlertDialog pDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
+        pDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.red));
+        pDialog.setTitleText(getString(R.string.loading));
+        pDialog.setCancelable(false);
+        pDialog.show();
+
+        return pDialog;
+    }
+
+    public void showToast(String msg) {
+        Toast.makeText(self, msg, Toast.LENGTH_SHORT).show();
+    }
 }

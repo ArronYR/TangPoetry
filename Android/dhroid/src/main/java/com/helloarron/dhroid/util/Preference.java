@@ -1,5 +1,6 @@
 package com.helloarron.dhroid.util;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.DataSetObservable;
@@ -16,6 +17,7 @@ import com.helloarron.dhroid.ioc.IocContainer;
  *
  * @author duohuo
  */
+@SuppressLint("ParcelCreator")
 public class Preference implements android.os.Parcelable {
 
     private static final DataSetObservable mDataSetObservable = new DataSetObservable();

@@ -26,7 +26,7 @@ import java.io.IOException;
  * Created by arron on 2017/3/12.
  */
 
-public class Util {
+public class ImageUtil {
 
     /**
      * 保存图片
@@ -61,7 +61,7 @@ public class Util {
             if (isPNG) {
                 bmp.compress(Bitmap.CompressFormat.PNG, 100, fos);
             } else {
-                bmp = Util.getRoundCornerImage(bmp, 0);
+                bmp = ImageUtil.getRoundCornerImage(bmp, 0);
                 bmp.compress(Bitmap.CompressFormat.JPEG, 100, fos);
             }
             fos.flush();

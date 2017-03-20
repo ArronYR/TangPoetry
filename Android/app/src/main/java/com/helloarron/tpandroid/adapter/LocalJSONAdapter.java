@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
+import com.google.gson.Gson;
 import com.helloarron.dhroid.adapter.BeanAdapter;
 import com.helloarron.dhroid.adapter.FieldMap;
 import com.helloarron.dhroid.adapter.FieldMapImpl;
@@ -12,6 +13,8 @@ import com.helloarron.dhroid.dialog.IDialog;
 import com.helloarron.dhroid.ioc.IocContainer;
 import com.helloarron.dhroid.net.JSONUtil;
 import com.helloarron.dhroid.util.MD5;
+import com.helloarron.tpandroid.bean.PoetryBean;
+import com.helloarron.tpandroid.utils.TPPreference;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,6 +29,8 @@ import java.util.List;
  */
 
 public class LocalJSONAdapter extends BeanAdapter<JSONObject> implements ILocalAdapter {
+
+    TPPreference per;
 
     private final Object mLock = new Object();
 
@@ -91,21 +96,16 @@ public class LocalJSONAdapter extends BeanAdapter<JSONObject> implements ILocalA
         this.fromWhat = fromWhat;
     }
 
-    public LocalJSONAdapter(JSONArray jsonArray, Context context, int mResource) {
+    public LocalJSONAdapter(Context context, int mResource) {
         super(context, mResource);
         fields = new ArrayList<FieldMap>();
         dialog = IocContainer.getShare().get(IDialog.class);
-        total = jsonArray.length();
-        data = jsonArray;
-        totalPage = (int) Math.ceil((double) total / (double) step);
     }
 
-    public LocalJSONAdapter(JSONArray jsonArray, Context context, int mResource, boolean isViewReuse) {
+    public LocalJSONAdapter(Context context, int mResource, boolean isViewReuse) {
         super(context, mResource, isViewReuse);
         fields = new ArrayList<FieldMap>();
         dialog = IocContainer.getShare().get(IDialog.class);
-        total = jsonArray.length();
-        data = jsonArray;
         totalPage = (int) Math.ceil((double) total / (double) step);
     }
 
@@ -211,7 +211,6 @@ public class LocalJSONAdapter extends BeanAdapter<JSONObject> implements ILocalA
         try {
             return MD5.encryptMD5("LocalJSONAdapter");
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return "";
     }
@@ -273,7 +272,19 @@ public class LocalJSONAdapter extends BeanAdapter<JSONObject> implements ILocalA
     }
 
     private void getDataFromJSONArray(int pageNo) {
-        Log.d("list-page", "total:" + total + "  => pageNO:" + pageNo + "  => totalPage:" + totalPage);
+        per = IocContainer.getShare().get(TPPreference.class);
+        per.load();
+        List<PoetryBean> poetries = per.getCollections();
+        String json = new Gson().toJson(poetries);
+        JSONArray collections = null;
+        try {
+            collections = new JSONArray(json);
+            total = collections.length();
+            data = collections;
+            totalPage = (int) Math.ceil((double) total / (double) step);
+        } catch (JSONException e) {
+        }
+
         List<JSONObject> list = new ArrayList<>();
         if (pageNo > totalPage) {
             hasMore = false;
