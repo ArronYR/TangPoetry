@@ -1,9 +1,10 @@
-package com.helloarron.tpandroid;
+package com.helloarron.tpandroid.base;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 
 import com.helloarron.dhroid.adapter.ValueFix;
+import com.helloarron.tpandroid.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 
 import java.text.SimpleDateFormat;

@@ -12,6 +12,9 @@ import com.helloarron.dhroid.net.GlobalCodeHandler;
 import com.helloarron.dhroid.net.GlobalParams;
 import com.helloarron.dhroid.net.cache.DaoHelper;
 import com.helloarron.dhroid.util.UserLocation;
+import com.helloarron.tpandroid.base.TPValueFix;
+import com.helloarron.tpandroid.base.TpCodeHandler;
+import com.helloarron.tpandroid.base.TpGlobalCodeHandler;
 import com.helloarron.tpandroid.utils.TPPreference;
 import com.helloarron.tpandroid.views.NormalDialog;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
@@ -54,10 +57,10 @@ public class TangPoetryApplication extends Application implements Thread.Uncaugh
         TPPreference per = IocContainer.getShare().get(TPPreference.class);
         per.load();
 
-        if (per.isFirst != 0) {
-            UserLocation location = UserLocation.getInstance();
-            location.init(this);
-        }
+//        if (per.isFirst != 0) {
+//            UserLocation location = UserLocation.getInstance();
+//            location.init(this);
+//        }
     }
 
     @Override

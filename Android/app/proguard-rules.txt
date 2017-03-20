@@ -19,28 +19,12 @@
 
 -keep class android.net.http.SslError
 -keep class android.webkit.**{*;}
--keep class cn.sharesdk.**{*;}
--keep class com.sina.**{*;}
--keep class m.framework.**{*;}
--keep class com.baidu.**{*;}
--keep class com.alipay.**{*;}
 
 -keep class com.google.**{*;}
-
-#========================Jpush & Jmessage====================#
--dontwarn cn.jpush.**
--keepattributes  EnclosingMethod,Signature
--keep class cn.jpush.** { *; }
--keepclassmembers class ** {
-    public void onEvent*(**);
-}
 
 #========================gson================================
 -dontwarn com.google.**
 -keep class com.google.gson.** {*;}
-
-# Gson specific classes
--keep class sun.misc.Unsafe { *; }
 
 #========================protobuf================================
 #-dontwarn com.google.**
@@ -87,8 +71,6 @@
   public static final android.os.Parcelable$Creator *;
 }
 
--keep class com.baidu.mapapi.** {*;}
-
 # eventbus
 -dontwarn de.greenrobot.event.**
 -keep class de.greenrobot.event.** { *; }
@@ -115,7 +97,7 @@
 #com.j256.ormlite  end
 
 # bean包，自定义的bean如果倍混淆了，可能对逻辑造成混乱==。
-# -keep class com.means.rabbit.bean.** { *; }
+-keep class com.helloarron.tpandroid.bean.** { *; }
 
 #自己定义的某些不能混淆的类
 -keep class com.helloarron.tpandroid.utils.** { *; }
