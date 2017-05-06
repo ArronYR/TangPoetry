@@ -171,15 +171,12 @@ public class RefreshListViewWithLocal extends LinearLayout {
             @Override
             public void callBack(List<JSONObject> list) {
 
-                Log.d("list", list.toString());
-                Log.d("getValues", mAdapter.getValues().size() + "");
                 if (onLoadSuccess != null) {
                     onLoadSuccess.loadSuccess(list);
                 }
 
                 if (mAdapter.getPageNo() == 1) {
                     if (mEmptyV != null) {
-                        Log.d("aa", "aaa");
                         emptyLayout.setVisibility(mAdapter.getValues().size() == 0 ? View.VISIBLE : View.GONE);
                     }
 

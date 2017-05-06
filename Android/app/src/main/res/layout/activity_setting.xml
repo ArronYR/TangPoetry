@@ -39,6 +39,7 @@
                     android:textSize="@dimen/text_medium" />
 
                 <TextView
+                    android:id="@+id/tv_version_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="right"
@@ -92,6 +93,25 @@
                         android:layout_height="24dp"
                         android:src="@drawable/icon_arrow_right" />
                 </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:id="@+id/ll_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_padding_l">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/feedback"
+                    android:textSize="@dimen/text_medium" />
             </LinearLayout>
 
             <View style="@style/line_horizontal" />

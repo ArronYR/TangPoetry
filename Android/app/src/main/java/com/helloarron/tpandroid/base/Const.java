@@ -19,5 +19,5 @@ public class Const {
     // 保存的确切位置
     public static final String SAVE_REAL_PATH = SAVE_PIC_PATH + "/TangPoetry";
 
-    public final static String HOST = "http://tp-api.helloarron.com";
+    public final static String HOST = "https://tp-api.helloarron.com";
 }

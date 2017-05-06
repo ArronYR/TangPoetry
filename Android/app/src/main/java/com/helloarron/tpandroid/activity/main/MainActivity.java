@@ -24,6 +24,7 @@ import com.helloarron.tpandroid.activity.collect.CollectPageFragment;
 import com.helloarron.tpandroid.activity.comprehensive.CompPageFragment;
 import com.helloarron.tpandroid.activity.home.HomePageFragment;
 import com.helloarron.tpandroid.bean.BackHomeEB;
+import com.pgyersdk.update.PgyUpdateManager;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -51,6 +52,9 @@ public class MainActivity extends FragmentActivity {
         initView();
         initTab();
         setTab(0);
+
+        // 默认对话框的版本更新检查
+        PgyUpdateManager.register(this, "925068e06d04d4e7c5eb690a7ee55e09");
     }
 
     private void initView() {

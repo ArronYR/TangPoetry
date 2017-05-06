@@ -96,6 +96,9 @@
 -keepclassmembers class com.helloarron.dhroid.bean.** { *; }
 #com.j256.ormlite  end
 
+-dontwarn com.pgyersdk.**
+-keep class com.pgyersdk.** { *; }
+
 # bean包，自定义的bean如果倍混淆了，可能对逻辑造成混乱==。
 -keep class com.helloarron.tpandroid.bean.** { *; }
 

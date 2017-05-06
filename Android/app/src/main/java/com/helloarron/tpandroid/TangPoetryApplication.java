@@ -18,6 +18,7 @@ import com.helloarron.tpandroid.base.TpGlobalCodeHandler;
 import com.helloarron.tpandroid.utils.TPPreference;
 import com.helloarron.tpandroid.views.NormalDialog;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
+import com.pgyersdk.crash.PgyCrashManager;
 
 /**
  * Created by arron on 2017/3/11.
@@ -61,6 +62,7 @@ public class TangPoetryApplication extends Application implements Thread.Uncaugh
 //            UserLocation location = UserLocation.getInstance();
 //            location.init(this);
 //        }
+        PgyCrashManager.register(this);
     }
 
     @Override
