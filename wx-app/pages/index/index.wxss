@@ -1,0 +1,43 @@
+/**index.wxss**/
+@import "../../components/loader/loader.wxss";
+@import "../../components/poetry/poetry.wxss";
+@import "../../components/refreshTip/refreshTip.wxss";
+
+.index__hd {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  z-index: 99;
+  background: #fff;
+}
+
+.page__hd {
+  padding-bottom: 20px;
+}
+
+.page__bd {
+  padding-bottom: 30px;
+}
+
+.page__title {
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.index__bd {
+  position: relative;
+  z-index: 98;
+  margin-top: 120px;
+}
+
+.like__icon {
+  text-align: center;
+}

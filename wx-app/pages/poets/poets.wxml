@@ -1,0 +1,17 @@
+<import src="../../components/none/none.wxml" />
+<view class="poets-hd">
+  <include src="../../components/searchBar/searchBar.wxml" />
+</view>
+<view class="poets-bd">
+  <view class="searchbar-result" wx:if="{{poets.length > 0}}">
+    <view class="weui-cells__title">共有 {{poets.length}} 条结果</view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator wx:for="{{poets}}" wx:for-index="idx" wx:for-item="obj"  wx:key="{{key}}" url="/pages/poet/poet?id={{obj.id}}" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">{{obj.name}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{obj.count}} 首</view>
+      </navigator>
+    </view>
+  </view>
+  <template wx:elif="{{inputVal.length > 0}}" is="none" data="{{text: '无搜索结果', subText:'╭(╯^╰)╮'}}" />
+  <template wx:else is="none" data="{{text: textDefault, subText:'输入诗人关键词进行搜索'}}" />
+</view>

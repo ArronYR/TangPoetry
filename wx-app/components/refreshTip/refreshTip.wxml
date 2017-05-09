@@ -1,0 +1,5 @@
+<template name="refreshTip">
+  <view class="refresh-tip refresh-tip__line">
+    <view class="refresh-tip__text refresh-tip__text_in-line">下拉刷新</view>
+  </view>
+</template>

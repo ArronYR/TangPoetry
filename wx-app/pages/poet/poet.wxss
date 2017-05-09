@@ -1,0 +1,5 @@
+/* pages/poetry/poetry.wxss */
+
+.page__hd{
+    padding-bottom: 20px;
+}

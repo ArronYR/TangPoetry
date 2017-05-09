@@ -1,0 +1,16 @@
+
+<!--pages/poet/poet.wxml-->
+<view class="page">
+  <view class="page__hd" hidden="{{hdShowe}}">
+    <view class="page__title">{{poet.name}}</view>
+    <view class="page__desc">{{poet.count}} 首</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <navigator wx:for="{{poet.poetries}}" wx:for-index="idx" wx:for-item="obj" wx:key="{{key}}" url="/pages/poetry/poetry?id={{obj.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">{{obj.title}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+</view>

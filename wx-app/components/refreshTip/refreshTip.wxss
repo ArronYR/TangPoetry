@@ -1,0 +1,26 @@
+.refresh-tip {
+  width: 65%;
+  margin: 1.5em auto;
+  line-height: 1.6em;
+  text-align: center;
+}
+
+.refresh-tip__line {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 2.4em;
+}
+
+.refresh-tip__text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #e5e5e5;
+}
+
+.refresh-tip__text_in-line {
+  position: relative;
+  top: -1.2em;
+  padding: 0 0.55em;
+  background-color: #fff;
+  color: #e5e5e5;
+}

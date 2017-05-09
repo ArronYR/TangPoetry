@@ -1,0 +1,19 @@
+@import "../../components/none/none.wxss";
+
+.collect-item {
+  padding-bottom: 10px;
+  background-color: #f8f8f8;
+}
+
+.collect-item__cells__title {
+  padding-top: 0.77em;
+  padding-bottom: 0.3em;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #999;
+  font-size: 14px;
+}
+
+.small__text {
+  font-size: 12px;
+}

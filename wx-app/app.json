@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/poets/poets",
+    "pages/poet/poet",
+    "pages/poetry/poetry",
+    "pages/user/user",
+    "pages/collects/collects"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "唐诗小站",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_index.png",
+        "selectedIconPath": "images/icon_index_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/poets/poets",
+        "iconPath": "images/icon_poets.png",
+        "selectedIconPath": "images/icon_poets_selected.png",
+        "text": "综合"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/icon_user.png",
+        "selectedIconPath": "images/icon_user_selected.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "debug": true
+}

@@ -1,0 +1,19 @@
+<import src="../../components/poetry/poetry.wxml" />
+
+<!--pages/poetry/poetry.wxml-->
+<view class="page">
+  <view class="index__hd">
+    <view class="page__hd">
+      <view class="page__title">{{poetry.title}}</view>
+      <view class="page__desc">{{poetry.poet.name}}</view>
+    </view>
+  </view>
+  <view class="index__bd">
+    <view class="page__bd">
+      <template is="poetry" data="{{contentArr}}" />
+    </view>
+  </view>
+  <view class="like__icon">
+    <image src="{{ liked ? '/images/icon_liked.png' : '/images/icon_like.png'}}" style="width:24px; height: 24px;" bindtap="bindImgTap"></image>
+  </view>
+</view>

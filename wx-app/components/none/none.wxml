@@ -1,0 +1,8 @@
+<template name="none">
+  <view class="none-container">
+    <view class="none-wrapper none-wrapper__line">
+      <view class="none-wrapper__text">{{text}}</view>
+    </view>
+    <view class="none-wrapper__sub">{{subText}}</view>
+  </view>
+</template>

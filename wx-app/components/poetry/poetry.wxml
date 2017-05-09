@@ -1,0 +1,7 @@
+<template name="poetry">
+  <view class="content-rows">
+    <view wx:for="{{contentArr}}" wx:for-index="idx" wx:for-item="obj" class="content-row" wx:key="{{key}}">
+      <view class="content-row__text">{{obj}}</view>
+    </view>
+  </view>
+</template>

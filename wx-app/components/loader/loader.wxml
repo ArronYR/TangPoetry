@@ -1,0 +1,7 @@
+<template name="loader">
+  <view class="loader-wrapper">
+    <view class="loader"></view>
+    <view class='loader-left-wrapper'></view>
+    <view class='loader-right-wrapper'></view>
+  </view>
+</template>

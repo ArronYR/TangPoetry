@@ -1,0 +1,16 @@
+@import "../../components/searchBar/searchBar.wxss";
+@import "../../components/none/none.wxss";
+
+.poets-hd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.poets-bd {
+  z-index: 89;
+  position: relative;
+  height: 100%;
+}

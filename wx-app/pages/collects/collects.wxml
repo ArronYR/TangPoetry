@@ -1,0 +1,18 @@
+<import src="../../components/none/none.wxml" />
+<view wx:if="{{collectsCount > 0}}">
+  <view class="page__bd">
+    <view class="collect-item" wx:for="{{collects}}" wx:for-index="idx" wx:for-item="collect" wx:key="{{key}}">
+      <view class="collect-item__cells__title">
+        <view style="display: inline-block; vertical-align: middle">{{collect[0].poet.name}}</view>
+        <view class="weui-badge" style="margin-left: 5px;" hidden="{{collect.length > 1 ? false : true}}">{{collect.length}}</view>
+      </view>
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/poetry/poetry?id={{obj.id}}" class="weui-cell" wx:for="{{collect}}" wx:for-index="id" wx:for-item="obj" wx:key="{{k}}" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">{{obj.title}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access small__text">{{obj.time}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<template wx:else is="none" data="{{text: '您还未收藏任何诗词', subText:'╭(╯^╰)╮'}}" />
