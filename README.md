@@ -15,7 +15,7 @@ See the 【[Android](https://github.com/ArronYR/TangPoetry/tree/master/Android)�
 See the 【[Api](https://github.com/ArronYR/TangPoetry/tree/master/api)】
 
 ## 微信小程序
-See the 【[wx-app](https://github.com/ArronYR/TangPoetry/tree/master/wx-app)
+See the 【[wx-app](https://github.com/ArronYR/TangPoetry/tree/master/wx-app)】
 
 ## About me
 
