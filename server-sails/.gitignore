@@ -38,8 +38,6 @@
 ################################################
 
 config/local.js
-config/connections.js
-
 
 
 

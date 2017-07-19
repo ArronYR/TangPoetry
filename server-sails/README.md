@@ -11,9 +11,12 @@ sails lift
 ```
 
 ## API
+
+host: `http://tps.helloarron.com`
+
 ### count
 
-+ `http://localhost:1337/poet/count`
++ `/poet/count`
 ```json
 {
   "status": 200,
@@ -21,7 +24,7 @@ sails lift
   "count": 2528
 }
 ```
-+ `http://localhost:1337/poetry/count`
++ `/poetry/count`
 ```json
 {
   "status": 200,
@@ -31,7 +34,7 @@ sails lift
 ```
 
 ### rand
-+ `http://localhost:1337/poet/rand`
++ `/poet/rand`
 ```json
 {
   "status": 200,
@@ -54,7 +57,7 @@ sails lift
   }
 }
 ```
-+ `http://localhost:1337/poetry/rand`
++ `/poetry/rand`
 ```json
 {
   "status": 200,
@@ -77,8 +80,8 @@ sails lift
 
 ### Find
 
-+ `http://localhost:1337/poets`
-+ `http://localhost:1337/poetries`
++ `/poets`
++ `/poetries`
 
 Request these two API will return `10` records about `poet` or `poetry`.
 
