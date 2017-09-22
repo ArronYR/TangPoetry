@@ -12,5 +12,5 @@
         android:padding="@dimen/margin_padding_m"
         android:singleLine="true"
         android:textAlignment="center"
-        android:textColor="@color/text_teal_400" />
+        android:textColor="@color/white" />
 </LinearLayout>

@@ -46,7 +46,7 @@ public class HomePageFragment extends TPBaseFagment {
 
     static HomePageFragment instance;
     View mainV;
-    View footerV;
+    View headerV, footerV;
     LayoutInflater mLayoutInflater;
 
     RefreshListViewAndMore listV;
@@ -73,7 +73,7 @@ public class HomePageFragment extends TPBaseFagment {
         per.load();
 
         self = getActivity();
-        setTitle(mainV, getString(R.string.home_title));
+        setTitle(mainV, getString(R.string.app_name));
         setLeftAction(mainV, R.drawable.icon_system, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,8 +88,10 @@ public class HomePageFragment extends TPBaseFagment {
 
     private void initView() {
         listV = (RefreshListViewAndMore) mainV.findViewById(R.id.my_listview);
+        headerV = LayoutInflater.from(self).inflate(R.layout.list_head_blank_white_view, null);
         footerV = LayoutInflater.from(self).inflate(R.layout.footer_like, null);
         contentListV = listV.getListView();
+        contentListV.addHeaderView(headerV);
         contentListV.addFooterView(footerV);
 
         tvTitle = (TextView) mainV.findViewById(R.id.tv_poetry_title);

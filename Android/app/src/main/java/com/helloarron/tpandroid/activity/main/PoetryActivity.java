@@ -39,7 +39,7 @@ public class PoetryActivity extends TPBaseActivity {
 
     TPPreference per;
 
-    View footerV;
+    View headerV, footerV;
 
     RefreshListViewAndMore listV;
     ListView contentListV;
@@ -77,8 +77,10 @@ public class PoetryActivity extends TPBaseActivity {
 
         String id = intent.getStringExtra("id");
         listV = (RefreshListViewAndMore) findViewById(R.id.my_listview);
+        headerV = LayoutInflater.from(self).inflate(R.layout.list_head_blank_white_view, null);
         footerV = LayoutInflater.from(self).inflate(R.layout.footer_like, null);
         contentListV = listV.getListView();
+        contentListV.addHeaderView(headerV);
         contentListV.addFooterView(footerV);
 
         tvTitle = (TextView) findViewById(R.id.tv_poetry_title);

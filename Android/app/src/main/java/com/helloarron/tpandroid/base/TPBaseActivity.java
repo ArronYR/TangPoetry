@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.helloarron.dhroid.activity.BaseActivity;
 import com.helloarron.tpandroid.R;
+import com.helloarron.tpandroid.utils.TpUtils;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -28,6 +29,9 @@ public abstract class TPBaseActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         self = this;
+
+        // 设置通知栏颜色
+        TpUtils.setWindowStatusBarColor(this, getResources().getColor(R.color.text_teal_400));
     }
 
     @Override

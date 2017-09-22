@@ -25,7 +25,6 @@ import org.w3c.dom.Text;
 
 public class PoetActivity extends TPBaseActivity {
 
-    View headV;
     TextView tvName, tvCount;
 
     RefreshListViewAndMore listV;
@@ -58,12 +57,10 @@ public class PoetActivity extends TPBaseActivity {
 
         String id = intent.getStringExtra("id");
         listV = (RefreshListViewAndMore) findViewById(R.id.my_listview);
-        headV = LayoutInflater.from(self).inflate(R.layout.head_poet, null);
-        listV.addHeadView(headV);
         contentListV = listV.getListView();
 
-        tvName = (TextView) headV.findViewById(R.id.tv_poet_name);
-        tvCount = (TextView) headV.findViewById(R.id.tv_poet_count);
+        tvName = (TextView) findViewById(R.id.tv_poet_name);
+        tvCount = (TextView) findViewById(R.id.tv_poet_count);
 
         getData(id);
     }

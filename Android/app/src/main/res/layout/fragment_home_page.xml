@@ -7,7 +7,7 @@
     <include layout="@layout/include_main_header" />
 
     <LinearLayout
-        android:background="@color/white"
+        android:background="@color/text_teal_400"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -22,7 +22,7 @@
             android:paddingRight="@dimen/margin_padding_l"
             android:paddingTop="@dimen/margin_padding_xxl"
             android:textAlignment="center"
-            android:textColor="@color/text_teal_400"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_bigger" />
 
         <TextView
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_padding_l"
-            android:textColor="@color/text_99_grey"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_small" />
     </LinearLayout>
 
@@ -38,7 +38,7 @@
         android:id="@+id/my_listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="3"
         android:gravity="center"
-        android:orientation="vertical" />
+        android:orientation="vertical"/>
 </LinearLayout>

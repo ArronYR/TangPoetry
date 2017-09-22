@@ -66,7 +66,7 @@ public class RefreshListViewAndMore extends LinearLayout {
         header.setPadding(0, DhUtil.dip2px(mContext, 15), 0, DhUtil.dip2px(mContext, 10));
 
         header.initWithString("Tang Poetry");
-        header.setTextColor(getResources().getColor(R.color.text_2B_green));
+        header.setTextColor(getResources().getColor(R.color.text_pink));
         mPtrFrame.addPtrUIHandler(header);
         mPtrFrame.setHeaderView(header);
         mPtrFrame.setPinContent(false);

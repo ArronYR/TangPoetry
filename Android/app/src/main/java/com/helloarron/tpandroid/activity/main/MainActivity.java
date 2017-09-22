@@ -24,6 +24,7 @@ import com.helloarron.tpandroid.activity.collect.CollectPageFragment;
 import com.helloarron.tpandroid.activity.comprehensive.CompPageFragment;
 import com.helloarron.tpandroid.activity.home.HomePageFragment;
 import com.helloarron.tpandroid.bean.BackHomeEB;
+import com.helloarron.tpandroid.utils.TpUtils;
 import com.pgyersdk.update.PgyUpdateManager;
 
 import java.util.Timer;
@@ -55,6 +56,9 @@ public class MainActivity extends FragmentActivity {
 
         // 默认对话框的版本更新检查
         PgyUpdateManager.register(this, "925068e06d04d4e7c5eb690a7ee55e09");
+
+        // 设置通知栏颜色
+        TpUtils.setWindowStatusBarColor(this, getResources().getColor(R.color.text_teal_400));
     }
 
     private void initView() {

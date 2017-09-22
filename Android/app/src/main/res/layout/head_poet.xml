@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
+        android:background="@color/text_teal_400"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -14,7 +15,7 @@
             android:id="@+id/tv_poet_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_44_black"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_bigger" />
 
         <TextView
@@ -22,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/margin_padding_s"
-            android:textColor="@color/text_99_grey"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_small" />
     </LinearLayout>
 

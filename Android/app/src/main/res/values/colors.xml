@@ -23,6 +23,7 @@
     <color name="text_teal_400">#26a69a</color>
 
     <color name="red">#FF7464</color>
+    <color name="transparent">#c0000000</color>
 
     <color name="grey_200">#eeeeee</color>
     <color name="grey_400">#bdbdbd</color>
